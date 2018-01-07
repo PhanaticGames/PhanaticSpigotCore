@@ -1,0 +1,5 @@
+name: PSC
+version: ${project.version}
+main: code.matthew.psc.PSC
+authors: [IMleader]
+description: The core for all spigot servers

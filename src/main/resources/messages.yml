@@ -1,0 +1,24 @@
+#####################
+#                   #
+#  MESSAGES CONFIG  #
+#                   #
+#####################
+
+banDenyFormat:
+  - "&cBanned"
+  - "&7For: %REASON%"
+  - "&7By: %STAFF%"
+  - "&7Until: %END%"
+
+msgs:
+  # General
+  noPerm: '&cYou do not have permission for this.'
+  mustBePlayer: '&cYou must be a player to do this.'
+
+  # Ban
+  banUsage: '&cInvalid usage. Please use:&6 /ban <player> <reason>'
+  playerNotOn: '&cThat player is not online!'
+  defaultBanWhy: '&cStaff has spoken.'
+  bannedPlayer: '&6%PLAYER% has been banned!'
+  staffBan: '&8[&cStaff&8]&6 %STAFF% has banned %PLAYER% for %REASON%'
+  pubBan: '&6%STAFF% has banned %PLAYER% for %REASON%'
