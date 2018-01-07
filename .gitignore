@@ -26,7 +26,7 @@ buildNumber.properties
 # Intellj #
 ###########
 # General
-.idea
+.idea/
 
 # CMake
 cmake-build-debug/
