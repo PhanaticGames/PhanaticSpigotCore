@@ -1,6 +1,7 @@
 package code.matthew.psc;
 
 import code.matthew.psc.cmd.BanCmd;
+import code.matthew.psc.cmd.ForceSync;
 import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
@@ -44,5 +45,6 @@ public final class PSC extends JavaPlugin {
     private void regCommands() {
         CommandManager.setup();
         CommandManager.regCommand(new BanCmd());
+        CommandManager.regCommand(new ForceSync());
     }
 }

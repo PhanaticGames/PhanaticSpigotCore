@@ -22,3 +22,9 @@ msgs:
   bannedPlayer: '&6%PLAYER% has been banned!'
   staffBan: '&8[&cStaff&8]&6 %STAFF% has banned %PLAYER% for %REASON%'
   pubBan: '&6%STAFF% has banned %PLAYER% for %REASON%'
+
+
+
+
+  # Force sync
+  forcedASync: '&6Sync forced!'

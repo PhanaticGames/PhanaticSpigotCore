@@ -40,7 +40,7 @@ public class Database {
     public void connect() {
         try {
             conn = hikariDataSource.getConnection();
-        }catch (SQLException ex) {
+        } catch (SQLException ex) {
             Logger.log(Logger.LogType.ERROR, "ERROR GETTING DATABASE CONNECTION");
             if (Logger.isDebug()) {
                 ex.printStackTrace();
@@ -50,7 +50,7 @@ public class Database {
 
     public Connection getConnection() {
         if (hikariDataSource != null) {
-            if(conn != null) {
+            if (conn != null) {
                 return conn;
             } else {
                 try {
@@ -76,7 +76,7 @@ public class Database {
             if (data != null && data.length > 0) {
                 for (int i = 0; i < data.length; i++) {
                     String param = data[i];
-                    stmt.setString(i+1, param);
+                    stmt.setString(i + 1, param);
                 }
             }
             return stmt;

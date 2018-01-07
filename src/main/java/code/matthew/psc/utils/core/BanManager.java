@@ -27,15 +27,16 @@ public class BanManager {
         setupSync();
     }
 
-    public void setupSync() {
+    private void setupSync() {
         BukkitScheduler scheduler = psc.getServer().getScheduler();
-        scheduler.scheduleSyncDelayedTask(psc, new Runnable() {
+        scheduler.scheduleSyncRepeatingTask(psc, new Runnable() {
             @Override
             public void run() {
                 AsyncBans bans = new AsyncBans();
                 bans.run();
             }
-        }, 18000L);
+            // When using seconds, * 20 to get ticks
+        }, 0L, 18000L);
     }
 
     public void banPlayer(Player p, String staff, String reason, String end) {
