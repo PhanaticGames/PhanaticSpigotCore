@@ -1,4 +1,4 @@
-package code.matthew.psc.cmd;
+package code.matthew.psc.cmd.ban;
 
 import code.matthew.psc.PSC;
 import code.matthew.psc.api.ICommand;
@@ -39,7 +39,7 @@ public class BanCmd extends ICommand {
 
             for (int i = 0; i < args.length; i++) {
                 if (i != 0) {
-                    builder.append(args[i] + " ");
+                    builder.append(args[i]).append(" ");
                 }
             }
             reason = builder.toString();

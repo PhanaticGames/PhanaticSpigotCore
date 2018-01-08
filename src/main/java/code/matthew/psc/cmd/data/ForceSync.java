@@ -1,4 +1,4 @@
-package code.matthew.psc.cmd;
+package code.matthew.psc.cmd.data;
 
 import code.matthew.psc.PSC;
 import code.matthew.psc.api.ICommand;

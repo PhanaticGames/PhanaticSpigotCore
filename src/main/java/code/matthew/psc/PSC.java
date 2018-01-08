@@ -1,8 +1,12 @@
 package code.matthew.psc;
 
-import code.matthew.psc.cmd.BanCmd;
-import code.matthew.psc.cmd.ForceSync;
-import code.matthew.psc.cmd.UnbanCmd;
+import code.matthew.psc.cmd.ban.BanCmd;
+import code.matthew.psc.cmd.ban.UnbanCmd;
+import code.matthew.psc.cmd.data.ForceSync;
+import code.matthew.psc.cmd.gamemode.GM3Cmd;
+import code.matthew.psc.cmd.gamemode.GMACmd;
+import code.matthew.psc.cmd.gamemode.GMCCmd;
+import code.matthew.psc.cmd.gamemode.GMSCmd;
 import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
@@ -55,5 +59,9 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new BanCmd());
         CommandManager.regCommand(new ForceSync());
         CommandManager.regCommand(new UnbanCmd());
+        CommandManager.regCommand(new GMSCmd());
+        CommandManager.regCommand(new GMCCmd());
+        CommandManager.regCommand(new GM3Cmd());
+        CommandManager.regCommand(new GMACmd());
     }
 }

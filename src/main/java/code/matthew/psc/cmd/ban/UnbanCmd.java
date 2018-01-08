@@ -1,4 +1,4 @@
-package code.matthew.psc.cmd;
+package code.matthew.psc.cmd.ban;
 
 import code.matthew.psc.PSC;
 import code.matthew.psc.api.Ban;
