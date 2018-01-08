@@ -81,6 +81,14 @@ public class BanManager {
         return false;
     }
 
+    public void unban(Ban ban) {
+        ban.setActive("false");
+        if(bansToSync.contains(ban)) {
+            bansToSync.remove(ban);
+        }
+        bansToSync.add(ban);
+    }
+
     public void addBanToSync(Ban ban) {
         bansToSync.add(ban);
         System.out.println(ban.getEnd());
@@ -89,12 +97,6 @@ public class BanManager {
 
     public List<Ban> getBanToSyncList() {
         return bansToSync;
-    }
-
-    public void removeBanFromSync(Ban ban) {
-        if (bansToSync.contains(ban)) {
-            bansToSync.remove(ban);
-        }
     }
 
     public String getDenyReason(Ban ban) {

@@ -23,8 +23,12 @@ msgs:
   staffBan: '&8[&cStaff&8]&6 %STAFF% has banned %PLAYER% for %REASON%'
   pubBan: '&6%STAFF% has banned %PLAYER% for %REASON%'
 
-
-
+  # Unban
+  unbanUsage: '&cInvalid usage. Please use:&6 /unban <player>'
+  pNotBanned: '&cThat player is not banned!'
+  staffUnban: '&8[&cStaff&8]&6 %STAFF% has unbanned %PLAYER%'
+  pubUnBan: '&b%STAFF% has unbanned %PLAYER%'
+  unbannedPlayer: '&bUnbanned %PLAYER%'
 
   # Force sync
   forcedASync: '&6Sync forced!'
