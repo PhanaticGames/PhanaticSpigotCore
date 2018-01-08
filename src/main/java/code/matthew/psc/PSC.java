@@ -9,6 +9,7 @@ import code.matthew.psc.utils.core.CommandManager;
 import code.matthew.psc.utils.data.ConfigCache;
 import code.matthew.psc.utils.data.Database;
 import code.matthew.psc.utils.data.Files;
+import code.matthew.psc.utils.logs.LogCleaner;
 import code.matthew.psc.utils.logs.Logger;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,16 +23,22 @@ public final class PSC extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // TODO MAKE DEBUG A CONFIG VAR
         instance = this;
         files = new Files(this);
         ConfigCache.setup(this);
+
+        Logger.setDebug(ConfigCache.getConfigBoolean("debug"));
+
         db = new Database(this);
         db.connect();
         bm = new BanManager(this);
-        Logger.setDebug(true);
+
         regListeners();
         regCommands();
+
+        if (ConfigCache.getConfigBoolean("clearLogsOnStart")) {
+            LogCleaner.cleanOldLogs();
+        }
     }
 
     @Override

@@ -29,11 +29,10 @@ public class BanManager {
 
     private void setupSync() {
         BukkitScheduler scheduler = psc.getServer().getScheduler();
-        // When using seconds, * 20 to get ticks
         scheduler.scheduleSyncRepeatingTask(psc, () -> {
             AsyncBans bans = new AsyncBans();
             bans.run();
-        }, 0L, 18000L);
+        }, 0L, ConfigCache.getConfigInt("dataSyncTime") * 20);
     }
 
     public void banPlayer(Player p, String staff, String reason, String end) {
@@ -73,10 +72,10 @@ public class BanManager {
 
     public boolean checkBan(Ban ban) {
         return ban != null && ban.isBanned();
-       //if (ban != null) {
-       //     return ban.isBanned();
-       // }
-      //  return false;
+        //if (ban != null) {
+        //     return ban.isBanned();
+        // }
+        //  return false;
     }
 
     public void unban(Ban ban) {

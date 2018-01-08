@@ -31,14 +31,14 @@ public class Logger {
     public static void log(LogType logType, String message) {
         switch (logType) {
             case INFO:
-                Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "INFO:" + message);
+                Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "INFO: " + message);
                 break;
             case ERROR:
-                Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "ERROR:" + message);
+                Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "ERROR: " + message);
                 break;
             case DEBUG:
                 if (Logger.isDebug()) {
-                    Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "DEBUG:" + message);
+                    Bukkit.getConsoleSender().sendMessage(logType.getChatColor() + "DEBUG: " + message);
                     break;
                 }
         }

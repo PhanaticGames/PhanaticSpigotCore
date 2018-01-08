@@ -18,10 +18,16 @@ public class Files {
     @Getter
     private File mySQL;
 
+    @Getter
+    private File configFile;
+
     private File messages;
 
     @Getter
     private Properties mySQLProp;
+
+    @Getter
+    private YamlConfiguration config;
 
     @Getter
     private YamlConfiguration messagesYML;
@@ -30,6 +36,7 @@ public class Files {
         this.psc = psc;
         mySQL = new File(psc.getDataFolder() + File.separator + "mysql.properties");
         messages = new File(psc.getDataFolder() + File.separator + "messages.yml");
+        configFile = new File(psc.getDataFolder() + File.separator + "config.yml");
         testExist();
         reload();
     }
@@ -46,6 +53,10 @@ public class Files {
         if(!messages.exists()) {
             psc.saveResource("messages.yml", false);
         }
+
+        if (!configFile.exists()) {
+            psc.saveResource("config.yml", false);
+        }
     }
 
     public void reload() {
@@ -57,6 +68,7 @@ public class Files {
             Logger.log(Logger.LogType.ERROR, "ERROR LOADING MYSQL INFO");
         }
         messagesYML = YamlConfiguration.loadConfiguration(messages);
+        config = YamlConfiguration.loadConfiguration(configFile);
     }
 
 }

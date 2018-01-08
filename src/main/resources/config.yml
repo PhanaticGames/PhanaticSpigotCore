@@ -1,0 +1,15 @@
+#####################
+#                   #
+#  GENERAL  CONFIG  #
+#                   #
+#####################
+
+general:
+  # The time between data syncs, in seconds, 900 = 15mins
+  dataSyncTime: 900
+
+  # Clear all old logs on start?
+  clearLogsOnStart: true
+
+  # Debug messages errors etc?
+  debug: treu
