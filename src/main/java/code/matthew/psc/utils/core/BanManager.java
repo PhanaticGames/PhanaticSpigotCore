@@ -29,13 +29,10 @@ public class BanManager {
 
     private void setupSync() {
         BukkitScheduler scheduler = psc.getServer().getScheduler();
-        scheduler.scheduleSyncRepeatingTask(psc, new Runnable() {
-            @Override
-            public void run() {
-                AsyncBans bans = new AsyncBans();
-                bans.run();
-            }
-            // When using seconds, * 20 to get ticks
+        // When using seconds, * 20 to get ticks
+        scheduler.scheduleSyncRepeatingTask(psc, () -> {
+            AsyncBans bans = new AsyncBans();
+            bans.run();
         }, 0L, 18000L);
     }
 
@@ -75,15 +72,16 @@ public class BanManager {
     }
 
     public boolean checkBan(Ban ban) {
-        if (ban != null) {
-            return ban.isBanned();
-        }
-        return false;
+        return ban != null && ban.isBanned();
+       //if (ban != null) {
+       //     return ban.isBanned();
+       // }
+      //  return false;
     }
 
     public void unban(Ban ban) {
         ban.setActive("false");
-        if(bansToSync.contains(ban)) {
+        if (bansToSync.contains(ban)) {
             bansToSync.remove(ban);
         }
         bansToSync.add(ban);
@@ -107,7 +105,7 @@ public class BanManager {
             s = s.replace("%REASON%", ban.getReason());
             s = s.replace("%STAFF%", ban.getStaff());
             s = s.replace("%END%", ban.getEnd());
-            builder.append(s + "\n");
+            builder.append(s).append("\n");
         }
         return builder.toString();
     }

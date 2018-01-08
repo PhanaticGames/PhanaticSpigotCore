@@ -22,6 +22,7 @@ public class UnbanCmd extends ICommand {
             return false;
         }
 
+        // TODO Sometime, in the far far future, we will use mojang api for this
         OfflinePlayer p = Bukkit.getOfflinePlayer(args[0]);
 
         Ban ban = PSC.getInstance().getBm().getBan(p.getUniqueId().toString());
