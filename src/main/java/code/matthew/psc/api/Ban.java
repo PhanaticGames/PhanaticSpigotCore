@@ -3,7 +3,6 @@ package code.matthew.psc.api;
 import code.matthew.psc.utils.logs.Logger;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.commons.lang.Validate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -57,8 +56,6 @@ public class Ban {
         Date end = null;
         Date today = new Date();
 
-        Validate.notNull(getEnd(), "END DATE NULL");
-
         try {
             end = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse(getEnd());
         }catch (ParseException ex) {
@@ -68,8 +65,6 @@ public class Ban {
                 ex.printStackTrace();
             }
         }
-
-        Validate.notNull(end, "END DATE NULL");
 
         if(end.after(today)) {
             return true;
