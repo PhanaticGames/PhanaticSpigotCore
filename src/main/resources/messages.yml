@@ -38,3 +38,16 @@ msgs:
   setPlayersGmSurvival: '&6The players gamemode has been set to survival'
   setPlayersGmAdventure: '&6The players gamemode has been set to adventure'
   setPlayersGmSpectator: '&6The players gamemode has been set to spectator'
+
+  # Clearchat
+  ccFormat: "&b%PLAYER% has cleared chat"
+
+  # Broadcast
+  broadcastUsage: '&cInvalid usage. Pelase use:&6 /broadcast <msg>'
+  bcFormat: '&8[&cBroadcast&8]&6 %MSG%'
+
+  # Kick
+  kickUsage: '&cInvalid usage. Please use:&6 /kick <player> <reason>'
+  defaultKickMsg: '&cStaff has spoken'
+  staffKick: '&8[&cStaff&8] %STAFF% kicked %PLAYER% for %REASON%'
+  pubKick: '&cStaff has kicked %PLAYER% for %REASON%'
