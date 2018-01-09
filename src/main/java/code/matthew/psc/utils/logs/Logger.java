@@ -18,8 +18,8 @@ public class Logger {
         ERROR("Error", ChatColor.DARK_RED),
         DEBUG("Debug", ChatColor.WHITE);
 
-        private String string;
-        private ChatColor chatColor;
+        private final String string;
+        private final ChatColor chatColor;
 
         LogType(String string, ChatColor chatColor) {
             this.string = string;

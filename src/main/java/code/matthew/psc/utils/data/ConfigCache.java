@@ -14,16 +14,16 @@ public class ConfigCache {
     private static List<String> banFormat;
 
     @Getter
-    private static Map<String, String> msgs = new HashMap<>();
+    private static final Map<String, String> msgs = new HashMap<>();
 
     @Getter
-    private static Map<String, Boolean> configBoolans = new HashMap<>();
+    private static final Map<String, Boolean> configBoolans = new HashMap<>();
 
     @Getter
-    private static Map<String, Integer> configInts = new HashMap<>();
+    private static final Map<String, Integer> configInts = new HashMap<>();
 
     @Getter
-    private static Map<String, String> configStrs = new HashMap<>();
+    private static final Map<String, String> configStrs = new HashMap<>();
 
     public static void setup(PSC psc) {
         banFormat = ColorUtil.colorList(psc.getFiles().getMessagesYML().getStringList("banDenyFormat"));

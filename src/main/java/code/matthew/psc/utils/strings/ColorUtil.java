@@ -12,6 +12,6 @@ public class ColorUtil {
     }
 
     public static List<String> colorList(List<String> list) {
-        return list.stream().map(s -> colorStr(s)).collect(Collectors.toList());
+        return list.stream().map(ColorUtil::colorStr).collect(Collectors.toList());
     }
 }

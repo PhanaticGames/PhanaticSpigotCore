@@ -20,7 +20,6 @@ public class SQLQuerys {
     }
 
     public static PreparedStatement unbanFromRawID(int rowId) {
-        Validate.notNull(rowId, "BAN NULL ON RAW ID");
         return PSC.getInstance().getDb().preparePreparedStmt("UPDATE bans SET active='false' WHERE id=?;", String.valueOf(rowId));
     }
 }

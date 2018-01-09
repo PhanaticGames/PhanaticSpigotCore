@@ -18,9 +18,9 @@ import java.util.List;
 
 public class BanManager {
 
-    private List<Ban> bansToSync = new ArrayList<>();
+    private final List<Ban> bansToSync = new ArrayList<>();
 
-    private PSC psc;
+    private final PSC psc;
 
     public BanManager(PSC psc) {
         this.psc = psc;
@@ -86,7 +86,7 @@ public class BanManager {
         bansToSync.add(ban);
     }
 
-    public void addBanToSync(Ban ban) {
+    private void addBanToSync(Ban ban) {
         bansToSync.add(ban);
         System.out.println(ban.getEnd());
         System.out.println(ban.getStart());

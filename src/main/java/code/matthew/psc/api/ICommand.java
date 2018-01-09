@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+@SuppressWarnings("WeakerAccess")
 public class ICommand extends Command {
 
     @Getter @Setter

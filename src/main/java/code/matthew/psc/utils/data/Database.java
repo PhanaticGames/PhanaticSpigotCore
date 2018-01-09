@@ -18,7 +18,7 @@ public class Database {
 
     private Connection conn;
 
-    private PSC psc;
+    private final PSC psc;
 
     public Database(PSC psc) {
         this.psc = psc;
@@ -48,7 +48,7 @@ public class Database {
         }
     }
 
-    public Connection getConnection() {
+    private Connection getConnection() {
         if (hikariDataSource != null) {
             if (conn != null) {
                 return conn;

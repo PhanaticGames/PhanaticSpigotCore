@@ -13,15 +13,15 @@ import java.util.Properties;
 
 public class Files {
 
-    private PSC psc;
+    private final PSC psc;
 
     @Getter
-    private File mySQL;
+    private final File mySQL;
 
     @Getter
-    private File configFile;
+    private final File configFile;
 
-    private File messages;
+    private final File messages;
 
     @Getter
     private Properties mySQLProp;
@@ -59,7 +59,7 @@ public class Files {
         }
     }
 
-    public void reload() {
+    private void reload() {
         try {
             InputStream is = new FileInputStream(mySQL);
             mySQLProp = new Properties();

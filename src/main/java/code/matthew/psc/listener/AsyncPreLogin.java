@@ -13,7 +13,7 @@ import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
  */
 public class AsyncPreLogin implements Listener {
 
-    private PSC psc;
+    private final PSC psc;
 
     public AsyncPreLogin(PSC psc) {
         this.psc = psc;
