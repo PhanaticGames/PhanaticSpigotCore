@@ -72,3 +72,7 @@ s
   freezeUsage: '&cInvalid usage. Please use:&6 /freeze <player>'
   unFroze: '&6%PLAYER% has been unfroze!'
   froze: '&6%PLAYER% has been frozen!'
+
+  # Fly
+  setFlyOn: '&6Your fly has been toggled'
+  setOtherFlyOn: '&6%PLAYER%s flight has been toggled'

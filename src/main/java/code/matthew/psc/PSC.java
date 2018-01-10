@@ -9,6 +9,7 @@ import code.matthew.psc.cmd.gamemode.GMCCmd;
 import code.matthew.psc.cmd.gamemode.GMSCmd;
 import code.matthew.psc.cmd.misc.Extinguish;
 import code.matthew.psc.cmd.misc.Feed;
+import code.matthew.psc.cmd.misc.Fly;
 import code.matthew.psc.cmd.misc.Heal;
 import code.matthew.psc.cmd.staff.*;
 import code.matthew.psc.listener.AsyncPreLogin;
@@ -79,5 +80,6 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new Extinguish());
         CommandManager.regCommand(new ClearInventory());
         CommandManager.regCommand(new Freeze());
+        CommandManager.regCommand(new Fly());
     }
 }
