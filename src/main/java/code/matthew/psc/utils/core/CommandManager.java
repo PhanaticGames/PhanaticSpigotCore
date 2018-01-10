@@ -7,10 +7,16 @@ import org.bukkit.command.CommandMap;
 
 import java.lang.reflect.Field;
 
+/**
+ * A class to work around having to add a command to plugin.yml
+ */
 public class CommandManager {
 
     private static CommandMap cmdMap;
 
+    /**
+     * Called by PSC, not to be used extenally
+     */
     public static void setup() {
         try {
             final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
@@ -24,6 +30,12 @@ public class CommandManager {
         }
     }
 
+    /**
+     * Register a command
+     * Note: This means you DO NOT add your command to plugin.yml
+     *
+     * @param cmd The ICommand object
+     */
     public static void regCommand(ICommand cmd) {
         cmdMap.register(cmd.getCmd(), cmd);
     }

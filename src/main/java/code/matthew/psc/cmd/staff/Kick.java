@@ -34,6 +34,8 @@ public class Kick extends ICommand {
             for (int i = 0; i <= args.length; i++) {
                 builder.append(args[i]).append(" ");
             }
+
+            why = builder.toString();
         } else {
             why = ConfigCache.getMsg("defaultKickMsg");
         }

@@ -6,8 +6,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Cleans old logs
+ */
 public class LogCleaner {
 
+    /**
+     * Clean the logs folder
+     */
     public static void cleanOldLogs() {
 
         Logger.log(Logger.LogType.INFO, "Cleaning logs...");

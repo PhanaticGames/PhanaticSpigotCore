@@ -8,6 +8,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * The ban object
+ */
 public class Ban {
 
     @Getter @Setter
