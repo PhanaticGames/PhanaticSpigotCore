@@ -12,6 +12,7 @@ import code.matthew.psc.cmd.misc.Feed;
 import code.matthew.psc.cmd.misc.Heal;
 import code.matthew.psc.cmd.staff.Broadcast;
 import code.matthew.psc.cmd.staff.ClearChat;
+import code.matthew.psc.cmd.staff.ClearInventory;
 import code.matthew.psc.cmd.staff.Kick;
 import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.listener.AyncChatEvent;
@@ -77,5 +78,6 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new Broadcast());
         CommandManager.regCommand(new Heal());
         CommandManager.regCommand(new Extinguish());
+        CommandManager.regCommand(new ClearInventory());
     }
 }

@@ -63,3 +63,7 @@ s
   # Extinguish
   extSelf: '&6You have been extinguished.'
   extOther: '&6That player has been extinguished.'
+
+  # Clear inventory
+  ciSelf: '&6Your inventory has been cleared'
+  ciOther: '&6That players inventory has been cleared'
