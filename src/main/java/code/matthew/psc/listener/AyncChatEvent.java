@@ -11,7 +11,6 @@ public class AyncChatEvent implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
-
         if (e.getMessage().contains("&")) {
             if (p.hasPermission("psc.chatcolor")) {
                 String newMsg = ColorUtil.colorStr(e.getMessage());

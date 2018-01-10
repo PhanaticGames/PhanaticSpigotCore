@@ -11,6 +11,7 @@ import code.matthew.psc.cmd.staff.Broadcast;
 import code.matthew.psc.cmd.staff.ClearChat;
 import code.matthew.psc.cmd.staff.Kick;
 import code.matthew.psc.listener.AsyncPreLogin;
+import code.matthew.psc.listener.AyncChatEvent;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
 import code.matthew.psc.utils.data.ConfigCache;
@@ -55,6 +56,7 @@ public final class PSC extends JavaPlugin {
 
     private void regListeners() {
         new AsyncPreLogin(this);
+        new AyncChatEvent();
     }
 
     private void regCommands() {
