@@ -67,3 +67,8 @@ s
   # Clear inventory
   ciSelf: '&6Your inventory has been cleared'
   ciOther: '&6That players inventory has been cleared'
+
+  # Feeze
+  freezeUsage: '&cInvalid usage. Please use:&6 /freeze <player>'
+  unFroze: '&6%PLAYER% has been unfroze!'
+  froze: '&6%PLAYER% has been frozen!'

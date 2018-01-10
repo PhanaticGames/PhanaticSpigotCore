@@ -10,12 +10,10 @@ import code.matthew.psc.cmd.gamemode.GMSCmd;
 import code.matthew.psc.cmd.misc.Extinguish;
 import code.matthew.psc.cmd.misc.Feed;
 import code.matthew.psc.cmd.misc.Heal;
-import code.matthew.psc.cmd.staff.Broadcast;
-import code.matthew.psc.cmd.staff.ClearChat;
-import code.matthew.psc.cmd.staff.ClearInventory;
-import code.matthew.psc.cmd.staff.Kick;
+import code.matthew.psc.cmd.staff.*;
 import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.listener.AyncChatEvent;
+import code.matthew.psc.listener.MoveEvent;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
 import code.matthew.psc.utils.data.ConfigCache;
@@ -60,7 +58,8 @@ public final class PSC extends JavaPlugin {
 
     private void regListeners() {
         new AsyncPreLogin(this);
-        new AyncChatEvent();
+        new AyncChatEvent(this);
+        new MoveEvent(this);
     }
 
     private void regCommands() {
@@ -79,5 +78,6 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new Heal());
         CommandManager.regCommand(new Extinguish());
         CommandManager.regCommand(new ClearInventory());
+        CommandManager.regCommand(new Freeze());
     }
 }
