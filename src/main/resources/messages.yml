@@ -45,9 +45,21 @@ msgs:
   # Broadcast
   broadcastUsage: '&cInvalid usage. Pelase use:&6 /broadcast <msg>'
   bcFormat: '&8[&cBroadcast&8]&6 %MSG%'
-
+s
   # Kick
   kickUsage: '&cInvalid usage. Please use:&6 /kick <player> <reason>'
   defaultKickMsg: '&cStaff has spoken'
   staffKick: '&8[&cStaff&8] %STAFF% kicked %PLAYER% for %REASON%'
   pubKick: '&cStaff has kicked %PLAYER% for %REASON%'
+
+  # Feed
+  fedSelf: '&6You have fed yourself'
+  fedOther: '&6That player has been fed'
+
+  # Heal
+  healedSelf: '&6You have healed yourself'
+  healedOther: '&6That player has been healed'
+
+  # Extinguish
+  extSelf: '&6You have been extinguished.'
+  extOther: '&6That player has been extinguished.'

@@ -7,6 +7,9 @@ import code.matthew.psc.cmd.gamemode.GM3Cmd;
 import code.matthew.psc.cmd.gamemode.GMACmd;
 import code.matthew.psc.cmd.gamemode.GMCCmd;
 import code.matthew.psc.cmd.gamemode.GMSCmd;
+import code.matthew.psc.cmd.misc.Extinguish;
+import code.matthew.psc.cmd.misc.Feed;
+import code.matthew.psc.cmd.misc.Heal;
 import code.matthew.psc.cmd.staff.Broadcast;
 import code.matthew.psc.cmd.staff.ClearChat;
 import code.matthew.psc.cmd.staff.Kick;
@@ -70,6 +73,9 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new GMACmd());
         CommandManager.regCommand(new ClearChat());
         CommandManager.regCommand(new Kick());
+        CommandManager.regCommand(new Feed());
         CommandManager.regCommand(new Broadcast());
+        CommandManager.regCommand(new Heal());
+        CommandManager.regCommand(new Extinguish());
     }
 }
