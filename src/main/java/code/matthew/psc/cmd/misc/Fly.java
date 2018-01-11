@@ -3,6 +3,7 @@ package code.matthew.psc.cmd.misc;
 import code.matthew.psc.api.ICommand;
 import code.matthew.psc.api.PlayerUtils;
 import code.matthew.psc.utils.data.ConfigCache;
+import code.matthew.psc.utils.data.DataCore;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -22,9 +23,18 @@ public class Fly extends ICommand {
             }
 
             Player p = (Player) sender;
-            p.setAllowFlight(true);
-            p.setFlying(true);
-            p.sendMessage(ConfigCache.getMsg("setFlyOn"));
+
+            if (DataCore.canFly(p)) {
+                p.setAllowFlight(false);
+                p.setFlying(false);
+                p.sendMessage(ConfigCache.getMsg("setFlyOn"));
+                DataCore.takePlayerFly(p);
+            } else {
+                p.setAllowFlight(true);
+                p.setFlying(true);
+                p.sendMessage(ConfigCache.getMsg("setFlyOn"));
+                DataCore.addPlayerFly(p);
+            }
 
             return true;
         } else {
@@ -41,8 +51,16 @@ public class Fly extends ICommand {
                 return false;
             }
 
-            p.setAllowFlight(true);
-            p.setFlying(true);
+            if (DataCore.canFly(p)) {
+                p.setAllowFlight(false);
+                p.setFlying(false);
+                DataCore.takePlayerFly(p);
+            } else {
+                p.setAllowFlight(true);
+                p.setFlying(true);
+                DataCore.addPlayerFly(p);
+            }
+
             p.sendMessage(ConfigCache.getMsg("setFlyOn"));
             sender.sendMessage(ConfigCache.getMsg("setOtherFlyOn").replace("%PLAYER%", p.getName()));
 
