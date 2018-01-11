@@ -12,4 +12,7 @@ general:
   clearLogsOnStart: true
 
   # Debug messages errors etc?
-  debug: treu
+  debug: true
+
+  # The main hub server
+  hub: 'hub-1'
