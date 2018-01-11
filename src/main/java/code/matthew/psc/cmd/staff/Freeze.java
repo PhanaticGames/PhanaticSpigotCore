@@ -30,10 +30,10 @@ public class Freeze extends ICommand {
 
 
         if (DataCore.isFrozen(p)) {
-            sender.sendMessage(ConfigCache.getMsg("unFroze"));
+            sender.sendMessage(ConfigCache.getMsg("unFroze").replace("%PLAYER%", p.getName()));
             DataCore.unfrezzePlayer(p);
         } else {
-            sender.sendMessage(ConfigCache.getMsg("froze"));
+            sender.sendMessage(ConfigCache.getMsg("froze").replace("%PLAYER%", p.getName()));
             DataCore.freezePlayer(p);
         }
 
