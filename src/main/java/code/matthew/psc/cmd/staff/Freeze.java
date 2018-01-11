@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 public class Freeze extends ICommand {
 
     public Freeze() {
-        super("feeze", "psc.freeze", "Feeeze or unfreeze a player", false);
+        super("freeze", "psc.freeze", "Feeeze or unfreeze a player", false);
 
     }
 
