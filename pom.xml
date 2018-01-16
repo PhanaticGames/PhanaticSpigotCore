@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>PhancticSpigotCore</name>
+    <name>PhanaticSpigotCore</name>
 
     <description>The core for all spigot servers!</description>
     <properties>
