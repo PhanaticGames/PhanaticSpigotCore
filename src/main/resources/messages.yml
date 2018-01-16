@@ -45,7 +45,7 @@ msgs:
   # Broadcast
   broadcastUsage: '&cInvalid usage. Pelase use:&6 /broadcast <msg>'
   bcFormat: '&8[&cBroadcast&8]&6 %MSG%'
-s
+
   # Kick
   kickUsage: '&cInvalid usage. Please use:&6 /kick <player> <reason>'
   defaultKickMsg: '&cStaff has spoken'
@@ -76,3 +76,10 @@ s
   # Fly
   setFlyOn: '&6Your fly has been toggled'
   setOtherFlyOn: '&6%PLAYER%s flight has been toggled'
+
+  # Tempban
+  tmpBanUsage: '&cInvalid usage. Please use&6 /tempban <player> <datediff> <reason>'
+  defaultTmpBanMsg: '&cStaff has spoken!'
+  tmpBannedPlayer: '&6%PLAYER% has been temp-banned!'
+  staffTempBan: '&8[&cStaff&8]&6 %STAFF% has temp-banned %PLAYER% for %REASON%'
+  pubTempBan: '&6%STAFF% has temp-banned %PLAYER% for %REASON%'

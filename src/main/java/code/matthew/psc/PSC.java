@@ -1,6 +1,7 @@
 package code.matthew.psc;
 
 import code.matthew.psc.cmd.ban.BanCmd;
+import code.matthew.psc.cmd.ban.TempBanCmd;
 import code.matthew.psc.cmd.ban.UnbanCmd;
 import code.matthew.psc.cmd.data.ForceSync;
 import code.matthew.psc.cmd.gamemode.GM3Cmd;
@@ -69,6 +70,7 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new BanCmd());
         CommandManager.regCommand(new ForceSync());
         CommandManager.regCommand(new UnbanCmd());
+        CommandManager.regCommand(new TempBanCmd());
         CommandManager.regCommand(new GMSCmd());
         CommandManager.regCommand(new GMCCmd());
         CommandManager.regCommand(new GM3Cmd());
