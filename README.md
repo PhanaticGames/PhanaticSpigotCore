@@ -5,7 +5,7 @@ The core for all phantic serevrs running spigot.
 Check wiki for ban,mute and other api features
 
 To include PSC in your plugin, add the following code to your pom.xml
-```
+```xml
 <repository>
     <id>psc</id>
     <url>http://75.176.38.251/nexus/content/repositories/snapshots/</url>
@@ -13,7 +13,7 @@ To include PSC in your plugin, add the following code to your pom.xml
 ```
 
 and
-```
+```xml
 <dependency>
     <groupId>code.matthew</groupId>
     <artifactId>PSC</artifactId>
