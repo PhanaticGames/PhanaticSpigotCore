@@ -1,4 +1,4 @@
-package code.matthew.psc.api;
+package code.matthew.psc.api.player;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

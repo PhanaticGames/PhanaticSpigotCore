@@ -1,6 +1,6 @@
 package code.matthew.psc.cmd.staff;
 
-import code.matthew.psc.api.ICommand;
+import code.matthew.psc.api.command.ICommand;
 import code.matthew.psc.utils.data.ConfigCache;
 import code.matthew.psc.utils.strings.ColorUtil;
 import org.bukkit.Bukkit;

@@ -1,7 +1,7 @@
 package code.matthew.psc.runnable;
 
 import code.matthew.psc.PSC;
-import code.matthew.psc.api.Ban;
+import code.matthew.psc.api.ban.Ban;
 import code.matthew.psc.utils.logs.Logger;
 import code.matthew.psc.utils.sql.SQLQuerys;
 import org.apache.commons.lang3.Validate;

@@ -1,4 +1,4 @@
-package code.matthew.psc.api;
+package code.matthew.psc.api.ban;
 
 import org.bukkit.entity.Player;
 

@@ -1,4 +1,4 @@
-package code.matthew.psc.api;
+package code.matthew.psc.api.ban;
 
 import code.matthew.psc.utils.logs.Logger;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package code.matthew.psc.utils.core;
 
-import code.matthew.psc.api.ICommand;
+import code.matthew.psc.api.command.ICommand;
 import code.matthew.psc.utils.logs.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;

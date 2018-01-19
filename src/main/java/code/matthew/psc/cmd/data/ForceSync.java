@@ -1,7 +1,7 @@
 package code.matthew.psc.cmd.data;
 
 import code.matthew.psc.PSC;
-import code.matthew.psc.api.ICommand;
+import code.matthew.psc.api.command.ICommand;
 import code.matthew.psc.runnable.AsyncBans;
 import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.command.CommandSender;

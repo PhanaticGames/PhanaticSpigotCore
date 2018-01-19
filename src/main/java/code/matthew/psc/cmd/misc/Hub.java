@@ -1,7 +1,7 @@
 package code.matthew.psc.cmd.misc;
 
 import code.matthew.psc.PSC;
-import code.matthew.psc.api.ICommand;
+import code.matthew.psc.api.command.ICommand;
 import code.matthew.psc.utils.data.ConfigCache;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;

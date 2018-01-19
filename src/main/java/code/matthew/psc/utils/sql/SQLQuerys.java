@@ -1,7 +1,7 @@
 package code.matthew.psc.utils.sql;
 
 import code.matthew.psc.PSC;
-import code.matthew.psc.api.Ban;
+import code.matthew.psc.api.ban.Ban;
 import org.apache.commons.lang.Validate;
 
 import java.sql.PreparedStatement;

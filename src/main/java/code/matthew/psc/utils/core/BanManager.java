@@ -1,8 +1,8 @@
 package code.matthew.psc.utils.core;
 
 import code.matthew.psc.PSC;
-import code.matthew.psc.api.Ban;
-import code.matthew.psc.api.BanFactory;
+import code.matthew.psc.api.ban.Ban;
+import code.matthew.psc.api.ban.BanFactory;
 import code.matthew.psc.runnable.AsyncBans;
 import code.matthew.psc.utils.data.ConfigCache;
 import code.matthew.psc.utils.logs.Logger;
