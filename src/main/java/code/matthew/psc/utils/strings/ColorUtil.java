@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class ColorUtil {
 
     /**
-     * Color a string, Uses & for colors
+     * Color a string.
      *
      * @param str The string to color
      * @return The string, colored
