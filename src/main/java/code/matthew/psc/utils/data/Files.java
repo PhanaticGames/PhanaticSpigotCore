@@ -42,6 +42,7 @@ public class Files {
     }
 
     private void testExist() {
+        // TODO: USE RETURNED BOOLEAN TO DO STUFF
         if(!psc.getDataFolder().exists()) {
             psc.getDataFolder().mkdir();
         }

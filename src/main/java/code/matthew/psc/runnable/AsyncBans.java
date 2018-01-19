@@ -4,7 +4,6 @@ import code.matthew.psc.PSC;
 import code.matthew.psc.api.ban.Ban;
 import code.matthew.psc.utils.logs.Logger;
 import code.matthew.psc.utils.sql.SQLQuerys;
-import org.apache.commons.lang3.Validate;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,10 +41,6 @@ public class AsyncBans implements Runnable {
                     psc.getDb().runUpdate(stmt);
                 }
             }
-
-            Validate.notNull(ban, "BAN NMULL");
-            Validate.notNull(psc, "PSC NULL");
-            Validate.notNull(psc.getDb(), "DB NULL");
 
             if (ban.isBanned()) {
                 psc.getDb().runUpdate(SQLQuerys.banToQuery(ban));

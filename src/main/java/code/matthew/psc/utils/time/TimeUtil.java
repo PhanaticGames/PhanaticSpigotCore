@@ -22,14 +22,19 @@ public class TimeUtil {
         switch (timeUnit) {
             case "m":
                 end = 1000 * 60 * Integer.parseInt(time);
+                break;
             case "h":
                 end = 1000 * 60 * 60 * Integer.parseInt(time);
+                break;
             case "d":
                 end = 1000 * 60 * 24 * Integer.parseInt(time);
+                break;
             case "M":
                 end = 1000 * 60 * 24 * 30 * Integer.parseInt(time);
+                break;
             case "y":
                 end = 1000 * 60 * 24 * 30 * 12 * Integer.parseInt(time);
+                break;
             default:
                 end = 0;
         }

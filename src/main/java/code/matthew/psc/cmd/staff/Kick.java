@@ -26,7 +26,7 @@ public class Kick extends ICommand {
             return false;
         }
 
-        String why = "";
+        String why;
 
         if (args.length >= 2) {
             StringBuilder builder = new StringBuilder();

@@ -25,6 +25,10 @@ public class LogCleaner {
             return;
         }
 
+        if (logs.listFiles() == null) {
+            return;
+        }
+
         for (File f : logs.listFiles()) {
             if (f != null) {
                 String ftype = Files.getFileExtension(f.getName());
