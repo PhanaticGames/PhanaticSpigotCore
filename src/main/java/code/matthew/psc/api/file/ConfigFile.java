@@ -54,27 +54,24 @@ public class ConfigFile {
      * Reload the files configuration
      */
     public void reload() {
-        if (configuration != null) {
+        if (file == null) {
+            setup();
+        }
 
-            if (file == null) {
-                setup();
-            }
-
-            try {
-                configuration = YamlHelper.loadConfiguration(file);
-            } catch (IOException | InvalidConfigurationException ex) {
-                if (ex instanceof IOException) {
-                    Logger.log(Logger.LogType.ERROR, "Error when loading a configuration file. General IO exception");
-                    if (Logger.isDebug()) {
-                        ex.printStackTrace();
-                    }
-                } else {
-                    Logger.log(Logger.LogType.ERROR, "Error when loading a configuration file. Invalid configuration mapping");
-                    if (Logger.isDebug()) {
-                        ex.printStackTrace();
-                    }
-                    // TODO, Rename file to broken 1 and make a fresh copy from plugin
+        try {
+            this.configuration = YamlHelper.loadConfiguration(file);
+        } catch (IOException | InvalidConfigurationException ex) {
+            if (ex instanceof IOException) {
+                Logger.log(Logger.LogType.ERROR, "Error when loading a configuration file. General IO exception");
+                if (Logger.isDebug()) {
+                    ex.printStackTrace();
                 }
+            } else {
+                Logger.log(Logger.LogType.ERROR, "Error when loading a configuration file. Invalid configuration mapping");
+                if (Logger.isDebug()) {
+                    ex.printStackTrace();
+                }
+                // TODO, Rename file to broken 1 and make a fresh copy from plugin
             }
         }
     }
