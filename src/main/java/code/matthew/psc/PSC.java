@@ -56,6 +56,7 @@ public final class PSC extends JavaPlugin {
     @Override
     public void onDisable() {
         db.close();
+        bm.sync();
     }
 
     private void regListeners() {

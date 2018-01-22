@@ -35,6 +35,11 @@ public class BanManager {
         }, 0L, ConfigCache.getConfigInt("dataSyncTime") * 20);
     }
 
+    public void sync() {
+        AsyncBans bans = new AsyncBans();
+        bans.run();
+    }
+
     public void banPlayer(Player p, String staff, String reason, String end) {
         addBanToSync(BanFactory.genBan(p, staff, reason, end, new Date().toString()));
     }
