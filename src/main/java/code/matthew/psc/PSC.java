@@ -59,7 +59,7 @@ public final class PSC extends JavaPlugin {
     }
 
     private void regListeners() {
-        new AsyncPreLogin(this);
+        new AsyncPreLogin();
         new AyncChatEvent(this);
         new MoveEvent(this);
         new PlayerLeave(this);
