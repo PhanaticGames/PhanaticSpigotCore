@@ -42,6 +42,8 @@ public class BanManager {
     public Ban getBan(String uuid) {
 
         for (Ban ban : bansToSync) {
+            System.out.println("PLAYER UUUID: " + uuid);
+            System.out.println("BAN UUID: " + ban.getUuid());
             if (ban.getUuid().equals(uuid)) {
                 return ban;
             }
@@ -54,7 +56,7 @@ public class BanManager {
 
         try {
             if (!rs.next()) {
-                Logger.log(Logger.LogType.DEBUG, "Return was empty");
+
             } else {
                 do {
                     ban = BanFactory.genBanRaw(rs.getString("name"), rs.getString("uuid"), rs.getString("staff"), rs.getString("reason"), rs.getString("end"), rs.getString("start"), rs.getString("active"));
@@ -71,11 +73,10 @@ public class BanManager {
     }
 
     public boolean checkBan(Ban ban) {
-        return ban != null && ban.isBanned();
-        //if (ban != null) {
-        //     return ban.isBanned();
-        // }
-        //  return false;
+        if (ban != null) {
+            return ban.isBanned();
+        }
+        return false;
     }
 
     public void unban(Ban ban) {
@@ -88,8 +89,6 @@ public class BanManager {
 
     private void addBanToSync(Ban ban) {
         bansToSync.add(ban);
-        System.out.println(ban.getEnd());
-        System.out.println(ban.getStart());
     }
 
     public List<Ban> getBanToSyncList() {

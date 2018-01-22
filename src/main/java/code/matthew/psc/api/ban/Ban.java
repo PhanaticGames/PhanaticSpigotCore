@@ -13,25 +13,32 @@ import java.util.Date;
  */
 public class Ban {
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String name;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String uuid;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String staff;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String reason;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String end;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String start;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private String active;
 
     public Ban(String name, String uuid, String staff, String reason, String end, String start) {
@@ -56,20 +63,24 @@ public class Ban {
 
     public boolean isBanned() {
 
+        if (getActive().equalsIgnoreCase("false")) {
+            return false;
+        }
+
         Date end = null;
         Date today = new Date();
 
         try {
             end = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse(getEnd());
-        }catch (ParseException ex) {
+        } catch (ParseException ex) {
             Logger.log(Logger.LogType.INFO, "ERROR PARSEING BAN DATE");
             ex.printStackTrace();
-            if(Logger.isDebug()) {
+            if (Logger.isDebug()) {
                 ex.printStackTrace();
             }
         }
 
-        if(end.after(today)) {
+        if (end.after(today)) {
             return true;
         }
         setActive("false");

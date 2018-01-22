@@ -1,6 +1,7 @@
 package code.matthew.psc.listener;
 
 import code.matthew.psc.PSC;
+import code.matthew.psc.api.ban.Ban;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
@@ -13,17 +14,19 @@ import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
  */
 public class AsyncPreLogin implements Listener {
 
-    private final PSC psc;
 
-    public AsyncPreLogin(PSC psc) {
-        this.psc = psc;
-        psc.getServer().getPluginManager().registerEvents(this, psc);
+    public AsyncPreLogin() {
+        PSC.getInstance().getServer().getPluginManager().registerEvents(this, PSC.getInstance());
     }
 
     @EventHandler
     public void onPreJoin(AsyncPlayerPreLoginEvent e) {
-        if (psc.getBm().checkBan(psc.getBm().getBan(e.getUniqueId().toString()))) {
-            e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, psc.getBm().getDenyReason(psc.getBm().getBan(e.getUniqueId().toString())));
+        Ban ban = PSC.getInstance().getBm().getBan(e.getUniqueId().toString());
+        if (ban != null) {
+            if (PSC.getInstance().getBm().checkBan(ban)) {
+                String deny = PSC.getInstance().getBm().getDenyReason(ban);
+                e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, deny);
+            }
         }
     }
 }
