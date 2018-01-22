@@ -1,6 +1,7 @@
 package code.matthew.psc.cmd.staff;
 
 import code.matthew.psc.api.command.ICommand;
+import code.matthew.psc.api.player.PlayerUtils;
 import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -19,7 +20,7 @@ public class Kick extends ICommand {
             return false;
         }
 
-        Player target = Bukkit.getPlayer(args[0]);
+        Player target = PlayerUtils.getOnlinePlayer(args[0]);
 
         if (target != null) {
             sender.sendMessage(ConfigCache.getMsg("playerNotOn"));
@@ -31,7 +32,7 @@ public class Kick extends ICommand {
         if (args.length >= 2) {
             StringBuilder builder = new StringBuilder();
 
-            for (int i = 0; i <= args.length; i++) {
+            for (int i = 1; i <= args.length; i++) {
                 builder.append(args[i]).append(" ");
             }
 
