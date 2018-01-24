@@ -41,14 +41,15 @@ public class BanManager {
     }
 
     public void banPlayer(Player p, String staff, String reason, String end) {
-        addBanToSync(BanFactory.genBan(p, staff, reason, end, new Date().toString()));
+        Ban ban = BanFactory.genBan(p, staff, reason, end, new Date().toString());
+        if (bansToSync.contains(ban)) {
+            bansToSync.remove(ban);
+        }
+        addBanToSync(ban);
     }
 
     public Ban getBan(String uuid) {
-
         for (Ban ban : bansToSync) {
-            System.out.println("PLAYER UUUID: " + uuid);
-            System.out.println("BAN UUID: " + ban.getUuid());
             if (ban.getUuid().equals(uuid)) {
                 return ban;
             }
