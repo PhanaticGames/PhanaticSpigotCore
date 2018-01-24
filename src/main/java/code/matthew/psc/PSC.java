@@ -14,6 +14,7 @@ import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.listener.AyncChatEvent;
 import code.matthew.psc.listener.MoveEvent;
 import code.matthew.psc.listener.PlayerLeave;
+import code.matthew.psc.nms.NMSUtil;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
 import code.matthew.psc.utils.data.ConfigCache;
@@ -30,12 +31,15 @@ public final class PSC extends JavaPlugin {
     @Getter private Database db;
     @Getter private Files files;
     @Getter private BanManager bm;
+    @Getter
+    private NMSUtil nmsUtil;
 
     @Override
     public void onEnable() {
         instance = this;
         files = new Files(this);
         ConfigCache.setup(this);
+        nmsUtil = new NMSUtil();
 
         Logger.setDebug(ConfigCache.getConfigBoolean("debug"));
 

@@ -3,7 +3,6 @@ package code.matthew.psc.nms;
 import code.matthew.psc.utils.logs.Logger;
 import net.minecraft.server.v1_8_R3.EntityInsentient;
 import net.minecraft.server.v1_8_R3.EntityTypes;
-import org.bukkit.entity.EntityType;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -14,7 +13,7 @@ import java.util.Map;
 
 public class NMSUtil {
 
-    public static void regiserEntity(String name, int id, Class<? extends EntityInsentient> nmsClass, Class<? extends EntityInsentient> customClass) {
+    public void regiserEntity(String name, int id, Class<? extends EntityInsentient> nmsClass, Class<? extends EntityInsentient> customClass) {
         try {
 
             List<Map<?, ?>> dataMap = new ArrayList<Map<?, ?>>();
@@ -30,7 +29,7 @@ public class NMSUtil {
                 dataMap.get(2).remove(id);
             }
 
-            Method method = EntityType.class.getDeclaredMethod("a", Class.class, String.class, int.class);
+            Method method = EntityTypes.class.getDeclaredMethod("a", Class.class, String.class, int.class);
             method.setAccessible(true);
             method.invoke(null, customClass, name, id);
 
