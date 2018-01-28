@@ -35,11 +35,15 @@ public final class PSC extends JavaPlugin {
     private NMSUtil nmsUtil;
 
     @Override
-    public void onEnable() {
+    public void onLoad() {
         instance = this;
+        nmsUtil = new NMSUtil();
+    }
+
+    @Override
+    public void onEnable() {
         files = new Files(this);
         ConfigCache.setup(this);
-        nmsUtil = new NMSUtil();
 
         Logger.setDebug(ConfigCache.getConfigBoolean("debug"));
 
