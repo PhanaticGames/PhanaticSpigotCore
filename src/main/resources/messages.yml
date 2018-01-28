@@ -83,3 +83,10 @@ msgs:
   tmpBannedPlayer: '&6%PLAYER% has been temp-banned!'
   staffTempBan: '&8[&cStaff&8]&6 %STAFF% has temp-banned %PLAYER% for %REASON%'
   pubTempBan: '&6%STAFF% has temp-banned %PLAYER% for %REASON%'
+
+  # START ADDED
+
+  # Setrank
+  setrankUsage: '&cInvalid usage. Please use&6 /setrank <player> <rank>'
+  rankSet: '&bThe players rank was set.'
+  errRankSet: '&cThe players rank was not set. Make sure that rank exists.'

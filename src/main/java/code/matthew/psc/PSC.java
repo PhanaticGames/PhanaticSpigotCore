@@ -23,6 +23,8 @@ import code.matthew.psc.utils.data.Files;
 import code.matthew.psc.utils.logs.LogCleaner;
 import code.matthew.psc.utils.logs.Logger;
 import lombok.Getter;
+import net.milkbowl.vault.permission.Permission;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PSC extends JavaPlugin {
@@ -33,6 +35,8 @@ public final class PSC extends JavaPlugin {
     @Getter private BanManager bm;
     @Getter
     private NMSUtil nmsUtil;
+    @Getter
+    private static Permission perms = null;
 
     @Override
     public void onLoad() {
@@ -50,6 +54,9 @@ public final class PSC extends JavaPlugin {
         db = new Database(this);
         db.connect();
         bm = new BanManager(this);
+
+        RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+        perms = rsp.getProvider();
 
         regListeners();
         regCommands();
@@ -94,5 +101,6 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new Freeze());
         CommandManager.regCommand(new Fly());
         CommandManager.regCommand(new Hub());
+        CommandManager.regCommand(new SetRank());
     }
 }
