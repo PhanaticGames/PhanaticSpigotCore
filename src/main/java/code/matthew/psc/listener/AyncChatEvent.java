@@ -1,6 +1,7 @@
 package code.matthew.psc.listener;
 
 import code.matthew.psc.PSC;
+import code.matthew.psc.api.mute.Mute;
 import code.matthew.psc.utils.strings.ColorUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,6 +17,13 @@ public class AyncChatEvent implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
+        Mute mute = PSC.getInstance().getMm().getMute(p.getUniqueId().toString());
+        if (mute != null) {
+            if (PSC.getInstance().getMm().checkMute(mute)) {
+                e.setCancelled(true);
+                p.sendMessage(ColorUtil.colorStr("youMayNotSpeak"));
+            }
+        }
         if (e.getMessage().contains("&")) {
             if (p.hasPermission("psc.chatcolor")) {
                 String newMsg = ColorUtil.colorStr(e.getMessage());

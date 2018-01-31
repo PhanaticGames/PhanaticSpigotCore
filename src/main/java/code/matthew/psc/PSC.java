@@ -9,6 +9,8 @@ import code.matthew.psc.cmd.gamemode.GMACmd;
 import code.matthew.psc.cmd.gamemode.GMCCmd;
 import code.matthew.psc.cmd.gamemode.GMSCmd;
 import code.matthew.psc.cmd.misc.*;
+import code.matthew.psc.cmd.mute.MuteCmd;
+import code.matthew.psc.cmd.mute.UnmuteCmd;
 import code.matthew.psc.cmd.staff.*;
 import code.matthew.psc.listener.AsyncPreLogin;
 import code.matthew.psc.listener.AyncChatEvent;
@@ -17,6 +19,7 @@ import code.matthew.psc.listener.PlayerLeave;
 import code.matthew.psc.nms.NMSUtil;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
+import code.matthew.psc.utils.core.MuteManager;
 import code.matthew.psc.utils.data.ConfigCache;
 import code.matthew.psc.utils.data.Database;
 import code.matthew.psc.utils.data.Files;
@@ -33,6 +36,8 @@ public final class PSC extends JavaPlugin {
     @Getter private Database db;
     @Getter private Files files;
     @Getter private BanManager bm;
+    @Getter
+    private MuteManager mm;
     @Getter
     private NMSUtil nmsUtil;
     @Getter
@@ -54,6 +59,7 @@ public final class PSC extends JavaPlugin {
         db = new Database(this);
         db.connect();
         bm = new BanManager(this);
+        mm = new MuteManager(this);
 
         RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
         perms = rsp.getProvider();
@@ -71,6 +77,7 @@ public final class PSC extends JavaPlugin {
     @Override
     public void onDisable() {
         bm.sync();
+        mm.sync();
         db.close();
     }
 
@@ -102,5 +109,7 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new Fly());
         CommandManager.regCommand(new Hub());
         CommandManager.regCommand(new SetRank());
+        CommandManager.regCommand(new MuteCmd());
+        CommandManager.regCommand(new UnmuteCmd());
     }
 }
