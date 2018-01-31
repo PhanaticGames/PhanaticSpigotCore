@@ -7,10 +7,10 @@ import code.matthew.psc.utils.data.DataCore;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Fly extends ICommand {
+public class FlyCmd extends ICommand {
 
-    public Fly() {
-        super("fly", "psc.fly", "Fly!!!!!", false);
+    public FlyCmd() {
+        super("fly", "psc.fly", "FlyCmd!!!!!", false);
     }
 
     @Override

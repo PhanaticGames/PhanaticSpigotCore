@@ -7,10 +7,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Kick extends ICommand {
+public class KickCmd extends ICommand {
 
-    public Kick() {
-        super("kick", "psc.kick", "Kick a player", false);
+    public KickCmd() {
+        super("kick", "psc.kick", "KickCmd a player", false);
     }
 
     @Override

@@ -6,10 +6,10 @@ import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Extinguish extends ICommand {
+public class ExtinguishCmd extends ICommand {
 
-    public Extinguish() {
-        super("ext", "psc.ext", "Extinguish you or another player", false);
+    public ExtinguishCmd() {
+        super("ext", "psc.ext", "ExtinguishCmd you or another player", false);
     }
 
     @Override

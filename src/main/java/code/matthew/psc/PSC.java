@@ -98,17 +98,17 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new GMCCmd());
         CommandManager.regCommand(new GM3Cmd());
         CommandManager.regCommand(new GMACmd());
-        CommandManager.regCommand(new ClearChat());
-        CommandManager.regCommand(new Kick());
-        CommandManager.regCommand(new Feed());
-        CommandManager.regCommand(new Broadcast());
-        CommandManager.regCommand(new Heal());
-        CommandManager.regCommand(new Extinguish());
-        CommandManager.regCommand(new ClearInventory());
-        CommandManager.regCommand(new Freeze());
-        CommandManager.regCommand(new Fly());
-        CommandManager.regCommand(new Hub());
-        CommandManager.regCommand(new SetRank());
+        CommandManager.regCommand(new ClearChatCmd());
+        CommandManager.regCommand(new KickCmd());
+        CommandManager.regCommand(new FeedCmd());
+        CommandManager.regCommand(new BroadcastCmd());
+        CommandManager.regCommand(new HealCmd());
+        CommandManager.regCommand(new ExtinguishCmd());
+        CommandManager.regCommand(new ClearInventoryCmd());
+        CommandManager.regCommand(new FreezeCmd());
+        CommandManager.regCommand(new FlyCmd());
+        CommandManager.regCommand(new HubCmd());
+        CommandManager.regCommand(new SetRankCmd());
         CommandManager.regCommand(new MuteCmd());
         CommandManager.regCommand(new UnmuteCmd());
     }

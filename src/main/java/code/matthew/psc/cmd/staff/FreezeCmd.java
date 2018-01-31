@@ -7,9 +7,9 @@ import code.matthew.psc.utils.data.DataCore;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Freeze extends ICommand {
+public class FreezeCmd extends ICommand {
 
-    public Freeze() {
+    public FreezeCmd() {
         super("freeze", "psc.freeze", "Feeeze or unfreeze a player", false);
 
     }

@@ -5,9 +5,9 @@ import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
-public class ClearChat extends ICommand {
+public class ClearChatCmd extends ICommand {
 
-    public ClearChat() {
+    public ClearChatCmd() {
         super("clearchat", "psc.clearchat", "Clear the chat", false);
     }
 

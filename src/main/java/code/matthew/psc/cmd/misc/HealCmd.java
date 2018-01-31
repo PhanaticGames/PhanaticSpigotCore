@@ -6,10 +6,10 @@ import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Heal extends ICommand {
+public class HealCmd extends ICommand {
 
-    public Heal() {
-        super("heal", "psc.heal", "Heal you or another player", false);
+    public HealCmd() {
+        super("heal", "psc.heal", "HealCmd you or another player", false);
     }
 
     @Override

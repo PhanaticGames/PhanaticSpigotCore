@@ -42,25 +42,25 @@ msgs:
   # Clearchat
   ccFormat: "&b%PLAYER% has cleared chat"
 
-  # Broadcast
+  # BroadcastCmd
   broadcastUsage: '&cInvalid usage. Pelase use:&6 /broadcast <msg>'
   bcFormat: '&8[&cBroadcast&8]&6 %MSG%'
 
-  # Kick
+  # KickCmd
   kickUsage: '&cInvalid usage. Please use:&6 /kick <player> <reason>'
   defaultKickMsg: '&cStaff has spoken'
   staffKick: '&8[&cStaff&8] %STAFF% kicked %PLAYER% for %REASON%'
   pubKick: '&cStaff has kicked %PLAYER% for %REASON%'
 
-  # Feed
+  # FeedCmd
   fedSelf: '&6You have fed yourself'
   fedOther: '&6That player has been fed'
 
-  # Heal
+  # HealCmd
   healedSelf: '&6You have healed yourself'
   healedOther: '&6That player has been healed'
 
-  # Extinguish
+  # ExtinguishCmd
   extSelf: '&6You have been extinguished.'
   extOther: '&6That player has been extinguished.'
 
@@ -73,7 +73,7 @@ msgs:
   unFroze: '&6%PLAYER% has been unfroze!'
   froze: '&6%PLAYER% has been frozen!'
 
-  # Fly
+  # FlyCmd
   setFlyOn: '&6Your fly has been toggled'
   setOtherFlyOn: '&6%PLAYER%s flight has been toggled'
 

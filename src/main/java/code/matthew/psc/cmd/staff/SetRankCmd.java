@@ -8,9 +8,9 @@ import code.matthew.psc.utils.strings.ColorUtil;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SetRank extends ICommand {
+public class SetRankCmd extends ICommand {
 
-    public SetRank() {
+    public SetRankCmd() {
         super("setrank", "psc.setrank", "Set a player", false);
     }
 

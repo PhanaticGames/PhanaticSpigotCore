@@ -8,9 +8,9 @@ import com.google.common.io.ByteStreams;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Hub extends ICommand {
+public class HubCmd extends ICommand {
 
-    public Hub() {
+    public HubCmd() {
         super("hub", "psc.hub", "Teleport to hub!", true);
     }
 

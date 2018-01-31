@@ -43,7 +43,7 @@ public class DataCore {
     }
 
     /**
-     * Freeze a player
+     * FreezeCmd a player
      *
      * @param p Player to freeze
      */

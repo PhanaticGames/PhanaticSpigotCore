@@ -1,4 +1,4 @@
-package code.matthew.psc.cmd.misc;
+package code.matthew.psc.cmd.staff;
 
 import code.matthew.psc.api.command.ICommand;
 import code.matthew.psc.api.player.PlayerUtils;
@@ -6,31 +6,27 @@ import code.matthew.psc.utils.data.ConfigCache;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Feed extends ICommand {
+public class ClearInventoryCmd extends ICommand {
 
-    public Feed() {
-        super("feed", "psc.feed", "Feed you or another player", false);
+    public ClearInventoryCmd() {
+        super("ci", "psc.ci", "Clear a players inventory", false);
     }
 
     @Override
     public boolean finalExe(CommandSender sender, String[] args) {
         if (args.length == 0) {
 
-            Player p = (Player) sender;
-
-            /*
-             * I know, the check for player seems redundent but I dont have a choice when it comes to feeding them
-             */
-            if (p == null) {
+            if (!(sender instanceof Player)) {
                 sender.sendMessage(ConfigCache.getMsg("mustBePlayer"));
                 return false;
             }
 
-            p.setFoodLevel(20);
-            p.sendMessage(ConfigCache.getMsg("fedSelf"));
+            Player p = (Player) sender;
 
+            p.getInventory().clear();
+            sender.sendMessage(ConfigCache.getMsg("ciSelf"));
+            return true;
         } else {
-
             Player p = PlayerUtils.getOnlinePlayer(args[0]);
 
             if (p == null) {
@@ -38,10 +34,10 @@ public class Feed extends ICommand {
                 return false;
             }
 
-            p.setFoodLevel(20);
-            p.sendMessage(ConfigCache.getMsg("fedSelf"));
-            sender.sendMessage(ConfigCache.getMsg("fedOther"));
+            p.getInventory().clear();
+            sender.sendMessage(ConfigCache.getMsg("ciOther"));
+            p.sendMessage(ConfigCache.getMsg("ciSelf"));
+            return true;
         }
-        return true;
     }
 }

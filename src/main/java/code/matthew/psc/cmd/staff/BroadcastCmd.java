@@ -6,10 +6,10 @@ import code.matthew.psc.utils.strings.ColorUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
-public class Broadcast extends ICommand {
+public class BroadcastCmd extends ICommand {
 
-    public Broadcast() {
-        super("broadcast", "psc.broadcast", "Broadcast a message", false);
+    public BroadcastCmd() {
+        super("broadcast", "psc.broadcast", "BroadcastCmd a message", false);
     }
 
     @Override
