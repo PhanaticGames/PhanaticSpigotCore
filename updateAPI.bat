@@ -1,3 +1,3 @@
 @ECHO OFF
-mvn install
+mvn deploy
 PAUSE
