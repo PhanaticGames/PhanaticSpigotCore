@@ -2,6 +2,7 @@ package code.matthew.psc.listener;
 
 import code.matthew.psc.PSC;
 import code.matthew.psc.api.mute.Mute;
+import code.matthew.psc.utils.data.ConfigCache;
 import code.matthew.psc.utils.strings.ColorUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +22,7 @@ public class AyncChatEvent implements Listener {
         if (mute != null) {
             if (PSC.getInstance().getMm().checkMute(mute)) {
                 e.setCancelled(true);
-                p.sendMessage(ColorUtil.colorStr("youMayNotSpeak"));
+                p.sendMessage(ColorUtil.colorStr(ConfigCache.getMsg("youMayNotSpeak")));
             }
         }
         if (e.getMessage().contains("&")) {
