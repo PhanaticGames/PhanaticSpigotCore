@@ -111,5 +111,6 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new SetRankCmd());
         CommandManager.regCommand(new MuteCmd());
         CommandManager.regCommand(new UnmuteCmd());
+        CommandManager.regCommand(new Workbench());
     }
 }
