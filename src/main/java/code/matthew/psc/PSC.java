@@ -102,7 +102,7 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new KickCmd());
         CommandManager.regCommand(new FeedCmd());
         CommandManager.regCommand(new BroadcastCmd());
-        CommandManager.regCommand(new HealCmd());
+        CommandManager.regCommand(new HealCmd())
         CommandManager.regCommand(new ExtinguishCmd());
         CommandManager.regCommand(new ClearInventoryCmd());
         CommandManager.regCommand(new FreezeCmd());
@@ -111,6 +111,7 @@ public final class PSC extends JavaPlugin {
         CommandManager.regCommand(new SetRankCmd());
         CommandManager.regCommand(new MuteCmd());
         CommandManager.regCommand(new UnmuteCmd());
-        CommandManager.regCommand(new Workbench());
+        CommandManager.regCommand(new WorkbenchCmd());
+        CommandManager.regCommand(new MuteChatCmd());
     }
 }

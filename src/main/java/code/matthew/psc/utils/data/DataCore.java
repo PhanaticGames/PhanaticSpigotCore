@@ -9,6 +9,25 @@ public class DataCore {
 
     private static List<Player> frozenStore = new ArrayList<>();
     private static List<Player> flyingStore = new ArrayList<>();
+    private static boolean isChatMuted = false;
+
+    /**
+     * Check if chat is muted
+     *
+     * @return True is chat is mutec
+     */
+    public static boolean isIsChatMuted() {
+        return isChatMuted;
+    }
+
+    /**
+     * Toggle the chat
+     *
+     * @param isChatMuted Is the chat muted
+     */
+    public static void setIsChatMuted(boolean isChatMuted) {
+        DataCore.isChatMuted = isChatMuted;
+    }
 
     /**
      * Add a player to the fly list

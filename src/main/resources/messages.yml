@@ -107,3 +107,7 @@ msgs:
   staffTempMute: '&8[&cStaff&8]&6 %STAFF% has temp-muted %PLAYER% for %REASON%'
   pubTempMute: '&6%STAFF% has temp-muted %PLAYER% for %REASON%'
   youMayNotSpeak: '&cYou may not speak at this time'
+
+  # Chat muted
+  chatUnmuted: '&6Chat was ummuted by %PLAYER%'
+  chatMuted: '&cChat was muted by %PLAYER%'

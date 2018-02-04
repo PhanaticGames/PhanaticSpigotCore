@@ -7,9 +7,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 
-public class Workbench extends ICommand {
+public class WorkbenchCmd extends ICommand {
 
-    public Workbench() {
+    public WorkbenchCmd() {
         super("wb", "psc.wb", "Open a workbench", true);
     }
 
