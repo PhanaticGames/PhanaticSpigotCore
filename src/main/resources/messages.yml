@@ -111,4 +111,8 @@ msgs:
   # Chat muted
   noSpeak: '&cYou may not speak at this time'
   chatUnmuted: '&6Chat was ummuted by %PLAYER%'
-  chatMuted: c&cChat was muted by %PLAYER%'
+  chatMuted: '&cChat was muted by %PLAYER%'
+
+  # Vanish
+  inVanish: '&6You are now hidden'
+  outVanish: '&6You are no longer hidden'
