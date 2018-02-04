@@ -10,6 +10,7 @@ public class DataCore {
     private static List<Player> frozenStore = new ArrayList<>();
     private static List<Player> flyingStore = new ArrayList<>();
     private static boolean isChatMuted = false;
+    private static List<Player> isVanish = new ArrayList<>();
 
     /**
      * Check if chat is muted
@@ -21,7 +22,46 @@ public class DataCore {
     }
 
     /**
+     * Check if a player is in vanish
+     *
+     * @return The list of players in vanish
+     */
+    public static List<Player> getIsVanish() {
+        return isVanish;
+    }
+
+    /**
+     * Set a player as vanished
+     *
+     * @param p
+     */
+    public static void addToVanish(Player p) {
+        DataCore.isVanish.add(p);
+    }
+
+    /**
+     * Remove a player from vanish
+     *
+     * @param p
+     */
+    public static void removeFromVanish(Player p) {
+        DataCore.isVanish.remove(p);
+    }
+
+    /**
+     * Check if a player is in vanish
+     *
+     * @param p
+     * @return If the player is in vanish
+     */
+    public static boolean isVanish(Player p) {
+        return DataCore.isVanish.contains(p);
+    }
+
+
+    /**
      * Toggle the chat
+
      *
      * @param isChatMuted Is the chat muted
      */

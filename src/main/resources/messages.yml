@@ -109,5 +109,6 @@ msgs:
   youMayNotSpeak: '&cYou may not speak at this time'
 
   # Chat muted
+  noSpeak: '&cYou may not speak at this time'
   chatUnmuted: '&6Chat was ummuted by %PLAYER%'
-  chatMuted: '&cChat was muted by %PLAYER%'
+  chatMuted: c&cChat was muted by %PLAYER%'

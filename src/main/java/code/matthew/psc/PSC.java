@@ -12,10 +12,7 @@ import code.matthew.psc.cmd.misc.*;
 import code.matthew.psc.cmd.mute.MuteCmd;
 import code.matthew.psc.cmd.mute.UnmuteCmd;
 import code.matthew.psc.cmd.staff.*;
-import code.matthew.psc.listener.AsyncPreLogin;
-import code.matthew.psc.listener.AyncChatEvent;
-import code.matthew.psc.listener.MoveEvent;
-import code.matthew.psc.listener.PlayerLeave;
+import code.matthew.psc.listener.*;
 import code.matthew.psc.nms.NMSUtil;
 import code.matthew.psc.utils.core.BanManager;
 import code.matthew.psc.utils.core.CommandManager;
@@ -86,6 +83,7 @@ public final class PSC extends JavaPlugin {
         new AyncChatEvent(this);
         new MoveEvent(this);
         new PlayerLeave(this);
+        new PlayerJoin();
     }
 
     private void regCommands() {
