@@ -22,7 +22,7 @@ public class KickCmd extends ICommand {
 
         Player target = PlayerUtils.getOnlinePlayer(args[0]);
 
-        if (target != null) {
+        if (target == null) {
             sender.sendMessage(ConfigCache.getMsg("playerNotOn"));
             return false;
         }
